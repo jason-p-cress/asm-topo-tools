@@ -1,9 +1,10 @@
 #!/bin/bash
 
-# Resets the ASM topology to a blank slate
 # Backs up the current topology
 #
-# 4/3/20 - Jason Cress
+# This will stop/start the ASM server
+#
+# 4/4/20 - Jason Cress
 
 #Verify ASM_HOME is set and this script directory exists
 if [ -z "$ASM_HOME" ] 
