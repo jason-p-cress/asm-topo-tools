@@ -1,0 +1,20 @@
+[
+{"name":"Show Netcool Events","itemType":"Both","description":"Show events in Event List","priority":10,"script":"var whereClause = 'Node = \\'' + asmProperties.name + '\\'';\nvar eventPayload = {\n   name: \"http://ibm.com/tip#NodeClickedOn\",\n   payload: {\n       product: {\n           OMNIbusWebGUI: {\n               displaycontext: {\n                  \"filterName\": \"ASMTopoEvents\",\n                  \"filterType\": \"user_transient\",\n                  \"registerFilter\": \"true\",\n                  \"sql\": whereClause,\n                  \"forceOverwrite\": \"true\",\n                  \"viewName\": \"Default\",\n                  \"viewType\": \"global\",\n                  \"dataSource\": \"OMNIBUS\"\n                 }\n            }\n        }\n    }\n};\nasmFunctions.sendPortletEvent(eventPayload);","tags":["ASM_UI_CONFIG"],"vertexType":"metadata","entityTypes":["ASM_UI_TOPOLOGY_TOOL"],"validForTypes":["*"],"menuLabel":"Show Netcool Events","databaseSource":"metadata"}
+,{"name":"application","keyIndexName":"ASM::entityType::resource::application","vertexType":"entityType","icon":"application","description":"resource","databaseSource":"types"}
+,{"name":"cluster","keyIndexName":"ASM::entityType::resource::cluster","vertexType":"entityType","icon":"hub","description":"resource","databaseSource":"types"}
+,{"name":"container","keyIndexName":"ASM::entityType::resource::container","vertexType":"entityType","icon":"container","description":"resource","databaseSource":"types"}
+,{"name":"database","keyIndexName":"ASM::entityType::resource::database","vertexType":"entityType","icon":"database","description":"resource","databaseSource":"types"}
+,{"name":"deployment","keyIndexName":"ASM::entityType::resource::deployment","vertexType":"entityType","icon":"deployment","description":"resource","databaseSource":"types"}
+,{"name":"image","keyIndexName":"ASM::entityType::resource::image","vertexType":"entityType","icon":"save","description":"resource","databaseSource":"types"}
+,{"name":"ipaddress","keyIndexName":"ASM::entityType::resource::ipaddress","vertexType":"entityType","icon":"ipaddress","description":"resource","databaseSource":"types"}
+,{"name":"networkaddress","keyIndexName":"ASM::entityType::resource::networkaddress","vertexType":"entityType","icon":"networkaddress","description":"resource","databaseSource":"types"}
+,{"name":"networkinterface","keyIndexName":"ASM::entityType::resource::networkinterface","vertexType":"entityType","icon":"networkinterface","description":"resource","databaseSource":"types"}
+,{"name":"pod","keyIndexName":"ASM::entityType::resource::pod","vertexType":"entityType","icon":"pod","description":"resource","databaseSource":"types"}
+,{"name":"router","keyIndexName":"ASM::entityType::resource::router","vertexType":"entityType","icon":"router","description":"resource","databaseSource":"types"}
+,{"name":"server","keyIndexName":"ASM::entityType::resource::server","vertexType":"entityType","icon":"server","description":"resource","databaseSource":"types"}
+,{"name":"service","keyIndexName":"ASM::entityType::resource::service","vertexType":"entityType","icon":"service","description":"resource","databaseSource":"types"}
+,{"name":"subnet","keyIndexName":"ASM::entityType::resource::subnet","vertexType":"entityType","icon":"subnet","description":"resource","databaseSource":"types"}
+,{"name":"vm","keyIndexName":"ASM::entityType::resource::vm","vertexType":"entityType","icon":"vm","description":"resource","databaseSource":"types"}
+,{"name":"cluster","vertexType":"metadata","shape":"","size":"","maxLabelLength":"","resourceLabel":"","style":{"stroke":"","strokeDasharray":"","fill":""},"entityTypes":["ASM_UI_RESOURCE_TYPE_DEFINITION"],"tags":["ASM_UI_CONFIG"],"databaseSource":"metadata"}
+,{"maxHops":10,"tags":["ASM_UI_CONFIG"],"vertexType":"metadata","historicalChangesThreshold":50,"requiredProperties":[],"entityTypes":["ASM_UI_GLOBAL_SETTINGS"],"uniqueId":"globalSettings","trustedSites":[],"enableTechPreview":false,"databaseSource":"metadata"}
+]
